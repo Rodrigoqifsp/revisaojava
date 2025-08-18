@@ -1,7 +1,6 @@
 import java.util.TreeSet;
-import java.util.Set;
 
-public class Produto implements Comparable<Produto> {
+class Produto implements Comparable<Produto> {
     private String nome;
     private double preco;
 
@@ -13,11 +12,11 @@ public class Produto implements Comparable<Produto> {
     @Override
     public int compareTo(Produto outro) {
         if (this.preco > outro.preco) {
-        	return 1;
+            return 1;
         } else if (this.preco == outro.preco) {
-        	return this.nome.compareTo(outro.nome);
-        } else if (this.preco < outro.preco) {
-    	return -1;
+            return this.nome.compareTo(outro.nome);
+        } else {
+            return -1;
         }
     }
 
@@ -27,13 +26,13 @@ public class Produto implements Comparable<Produto> {
     }
 }
 
-public class TesteProduto {
+class TesteProduto {
     public static void main(String[] args) {
         TreeSet<Produto> produtos = new TreeSet<>();
         produtos.add(new Produto("A", 1));
-        produtos.add(new Produto("B", 2));
-        produtos.add(new Produto("C", 2));
-        produtos.add(new Produto("D", 3));
+        produtos.add(new Produto("B", 3));
+        produtos.add(new Produto("C", 3));
+        produtos.add(new Produto("D", 2));
         for (Produto produto : produtos) {
             System.out.println(produto);
         }

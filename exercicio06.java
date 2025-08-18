@@ -1,4 +1,4 @@
-public class Circulo {
+class Circulo {
     private double raio;
 
     public Circulo(double raio) {
@@ -6,7 +6,7 @@ public class Circulo {
     }
     
     public double getRaio() { return raio; }
-    public double setRaio(double raio) {
+    public void setRaio(double raio) {
     	if (raio <= 0) {
             throw new IllegalArgumentException("Raio deve ser positivo");
         }

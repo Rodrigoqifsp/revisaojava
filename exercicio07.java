@@ -1,4 +1,4 @@
-public class Veiculo {
+class Veiculo {
     private String marca;
     private String modelo;
 
@@ -16,7 +16,7 @@ public class Veiculo {
     }
 }
 
-public class Carro extends Veiculo {
+class Carro extends Veiculo {
 	private int numeroDePortas;
 
 	public Carro(String marca, String modelo, int numeroDePortas) {
@@ -30,7 +30,7 @@ public class Carro extends Veiculo {
     }
 }
 
-public class Moto extends Veiculo {
+class Moto extends Veiculo {
 	private float cilindradas;
 
 	public Moto(String marca, String modelo, float cilindradas) {

@@ -1,10 +1,10 @@
-public class SaldoInsuficienteException extends Exception {
+class SaldoInsuficienteException extends Exception {
     public SaldoInsuficienteException(String mensagem) {
         super(mensagem);
     }
 }
 
-public class ContaBancaria {
+class ContaBancaria {
     private String titular;
     private double saldo;
 
@@ -16,7 +16,7 @@ public class ContaBancaria {
     public void depositar(double valor) {
     	 this.saldo += valor;
      }
-    public void sacar(double valor) {
+    public void sacar(double valor) throws SaldoInsuficienteException{
     	if(valor > this.saldo) {
     		throw new SaldoInsuficienteException("Saldo insuficiente");
     	}
@@ -27,7 +27,7 @@ public class ContaBancaria {
     public double getSaldo() { return saldo; }
 }
 
-public class TesteContaBancaria {
+class TesteContaBancaria {
 	public static void main(String[] args) {
 	    ContaBancaria conta_teste = new ContaBancaria("Teste", 1);
 	    try {
